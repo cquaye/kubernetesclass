@@ -1,0 +1,35 @@
+apiVersion: templates.gatekeeper.sh/v1
+kind: ConstraintTemplate
+metadata:
+  name: k8sallowedport
+spec:
+  crd:
+    spec:
+      names:
+        kind: K8sAllowedPort
+  targets:
+  - target: admission.k8s.gatekeeper.sh
+    rego: |
+      package k8sallowedport
+
+      violation[{"msg": msg}] {
+        input.review.object.kind == "Service"
+        ns := input.review.object.metadata.namespace
+        port := input.review.object.spec.ports[_].port
+
+        ns == "falcon"
+        port != 12000
+
+        msg := "Falcon namespace must use port 12000"
+      }
+
+      violation[{"msg": msg}] {
+        input.review.object.kind == "Service"
+        ns := input.review.object.metadata.namespace
+        port := input.review.object.spec.ports[_].port
+
+        ns == "lindworm"
+        port != 3653
+
+        msg := "Lindworm namespace must use port 3653"
+      }
