@@ -66,8 +66,8 @@ Kong describes rate limiting as controlling how many requests a client can make 
 
 Phase 2 — Create the Rate Limiting Plugin
 
-For the first version, keep it simple:
+For the first version, keep it simple: rate-limit-plugin.yaml: https://github.com/BalericaAI/kubernetesclass/blob/main/Project7_Kong/yaml/rate-limit-plugin.yaml
 
-rate-limit-plugin.yaml: 
+        kubectl apply -f rate-limit-plugin.yaml
 
 
