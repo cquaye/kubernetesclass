@@ -5,9 +5,8 @@ Control API Abuse with Kong Rate Limiting
 
 Big Idea
 
-In Kong Lab 2:--> Kong decided who may access the API.
-
-In Kong Lab 3:--> Kong decides how much access they get.
+A) In Kong Lab 2:--> Kong decided who may access the API.
+B) In Kong Lab 3:--> Kong decides how much access is permitted.
 
 This is the platform lesson:--> A valid user can still be a problem.”
 
