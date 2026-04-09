@@ -1,0 +1,12 @@
+Client
+  |
+  |  (Authenticated or unauthenticated traffic)
+  v
+Kong Gateway
+  |
+  |  Rate Limiting Plugin
+  v
+Service
+  |
+  v
+Pods
