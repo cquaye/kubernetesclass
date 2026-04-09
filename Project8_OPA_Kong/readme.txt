@@ -46,4 +46,14 @@ If violated:--->  Request must be denied.  No Lizzo banana for YOU!
 Stage 1: Service Deployment
 
 falcon: https://github.com/BalericaAI/kubernetesclass/blob/main/Project8_OPA_Kong/yaml/falcon.yaml
-lindworm: 
+lindworm: https://github.com/BalericaAI/kubernetesclass/blob/main/Project8_OPA_Kong/yaml/lindworm.yaml
+
+Kong Routing Requirement
+
+Routes must exist:
+
+/falcon
+/lindworm
+
+
+
