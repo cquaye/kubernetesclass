@@ -64,6 +64,9 @@ Verify: curl http://<KONG>/hello
 What happened?
 
 Phase 4 — Give Chewbacca Access
+Apply Chewbacca: 
+
+kubectl apply -f chewbacca.yaml
 
 
 
