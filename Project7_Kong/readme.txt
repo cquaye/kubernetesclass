@@ -26,3 +26,29 @@ Kong’s KIC docs specifically show rate limiting by creating a KongPlugin with 
 and setting config.minute to the allowed number of requests per minute, then associating it with a
 Kubernetes resource using konghq.com/plugins
 
+
+Scenerio
+
+        “You locked the API with authentication. Good.
+        Then Chewbacca sends 10,000 Lizzo pic requests.
+        Your app is still dead.
+        Fix it without touching application code.”
+        
+        That is a real platform-engineering problem.
+
+
+Starting Point
+
+You should already have from prior labs:
+
+        hello-app
+        hello-service
+        hello-ingress
+        optional Lab 2 key auth working
+
+They should be able to hit
+
+curl http://<KONG>/hello
+or
+curl http://<KONG>/hello -H "apikey: super-secret-key"
+
