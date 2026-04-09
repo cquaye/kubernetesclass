@@ -19,3 +19,34 @@ Hello App: https://github.com/BalericaAI/kubernetesclass/blob/main/Project5_Kong
 
 Phase 2 — Create the Service
 
+Hello Service: https://github.com/BalericaAI/kubernetesclass/blob/main/Project5_Kong/yaml/helloservice.yaml
+
+Verify
+
+    kubectl get pods
+    kubectl get svc
+
+Phase 3 — Install Kong
+
+Install via Helm: 
+
+    helm repo add kong https://charts.konghq.com
+    helm repo update
+    
+    kubectl create namespace kong
+    
+    helm install kong kong/ingress -n kong
+
+Then verify:
+    kubectl get pods -n kong
+    kubectl get svc -n kong
+
+Questions:
+  1) What is the controller pod?
+  2) What is the proxy Service?
+  3) Waht is the namespace separation?
+
+Phase 4 — Expose the app through Kong with Ingress
+
+Example Ingress:
+
