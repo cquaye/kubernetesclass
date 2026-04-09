@@ -13,3 +13,20 @@ flood evidence showing 429 Too Many Requests
 Answer this: --> Where is request throttling enforced?
 
 Correct answer:--> At Kong, before the upstream Kubernetes service handles the request.
+
+
+Required Verification Commands
+
+    kubectl get kongplugin
+    kubectl describe ingress hello-ingress
+    kubectl get svc
+    kubectl get pods
+    kubectl logs -n kong <kong-controller-pod>
+    k6 run rate-test.js
+
+Reflection Questions
+
+    Why is authentication alone not enough?
+    Why should rate limiting happen at the gateway instead of inside every microservice?
+    What is the difference between 401, 403, and 429?
+    How could a bad rate limit configuration break production?
