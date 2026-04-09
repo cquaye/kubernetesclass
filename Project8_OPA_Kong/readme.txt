@@ -85,7 +85,10 @@ Example expectation:
 | darth malgus | sith-control |
 
 https://github.com/BalericaAI/kubernetesclass/blob/main/Project8_OPA_Kong/yaml/chewbaccakey.yaml
+https://github.com/BalericaAI/kubernetesclass/blob/main/Project8_OPA_Kong/yaml/malguskey.yaml
 
+
+REMEMBER: Kong vs OPA!!!!
 
 Kong---> authentication
 OPA---> authorization decisions
