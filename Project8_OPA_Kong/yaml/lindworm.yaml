@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lindworm-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lindworm
+  template:
+    metadata:
+      labels:
+        app: lindworm
+    spec:
+      containers:
+      - name: lindworm
+        image: hashicorp/http-echo
+        args:
+        - "-text=Lindworm system online"
+        ports:
+        - containerPort: 5678
