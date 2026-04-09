@@ -79,7 +79,25 @@ Phase 3 — Attach the Plugin
 
 You can attach plugins to an Ingress, Service, HTTPRoute, KongConsumer, or other supported resources using konghq.com/plugins. For this lab, attaching it to the Ingress keeps the mental model simple.
 
-Apply Rate_Limit_Ingress.yaml
+Apply Ingress_Rate_Limit_Ingress.yaml
+https://github.com/BalericaAI/kubernetesclass/blob/main/Project7_Kong/yaml/ingress_rate_limit_plugin.yaml
+
+        kubectl apply -f  Ingress_Rate_Limit_Ingress.yaml
+
+Phase 4 — Test Slowly First
+
+First, prove the API still works under normal use.
+
+        curl http://<KONG>/hello
+        curl http://<KONG>/hello
+        curl http://<KONG>/hello
+
+If Kong Lab 2 key-auth is still enabled:
+
+        curl http://<KONG>/hello -H "apikey: super-secret-key"
+        curl http://<KONG>/hello -H "apikey: super-secret-key"
+        curl http://<KONG>/hello -H "apikey: super-secret-key"
+
 
 
 
