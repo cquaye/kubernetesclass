@@ -69,5 +69,10 @@ Apply Chewbacca: https://github.com/BalericaAI/kubernetesclass/blob/main/Project
 kubectl apply -f chewbacca.yaml
 
 
+Phase 5 — Create API Key Credential
+Apply API Key Cred: 
+
+    kubectl apply -f chewbacca_key.yaml
+
 
 
