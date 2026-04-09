@@ -55,5 +55,40 @@ Routes must exist:
 /falcon
 /lindworm
 
+Make Kong USERS!!!
+
+Consumers
+        chewbacca
+        darth-malgus
+API Keys
+
+Example expectation:
+
+| User         | API Key      |
+| ------------ | ------------ |
+| chewbacca    | wookie-power |
+| darth malgus | sith-control |
+
+
+Kong---> authentication
+OPA---> authorization decisions
+
+OPA Policy Requirement
+
+You must implement:
+
+Rule:
+
+allow {
+  input.user == "chewbacca"
+  input.path == "/falcon"
+}
+
+allow {
+  input.user == "darth-malgus"
+  input.path == "/lindworm"
+}
+
+
 
 
