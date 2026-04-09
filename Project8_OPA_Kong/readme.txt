@@ -84,6 +84,8 @@ Example expectation:
 | chewbacca    | wookie-power |
 | darth malgus | sith-control |
 
+https://github.com/BalericaAI/kubernetesclass/blob/main/Project8_OPA_Kong/yaml/chewbaccakey.yaml
+
 
 Kong---> authentication
 OPA---> authorization decisions
