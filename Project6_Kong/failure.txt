@@ -1,0 +1,24 @@
+Failure A — Wrong Header Name
+
+curl http://<KONG>/hello -H "api_key: super-secret-key"
+
+    What Happens? Why? What is the correct answer?
+
+Failure B — Wrong Key
+
+curl http://<KONG>/hello -H "apikey: lizzo-booty-key"
+
+    What Happens? Why? What is the correct answer?
+
+Failure C — Plugin Not Attached
+
+Remove annotation: konghq.com/plugins: key-auth-plugin
+
+    What Happens? Why? What is the correct answer?
+
+Failure D — Consumer Missing
+
+Delete consumer:  kubectl delete kongconsumer student-user
+
+   What Happens? Why? What is the correct answer?
+
