@@ -98,6 +98,12 @@ If Kong Lab 2 key-auth is still enabled:
         curl http://<KONG>/hello -H "apikey: super-secret-key"
         curl http://<KONG>/hello -H "apikey: super-secret-key"
 
+Phase 5 — Trigger the Limit
 
+Now make them exceed the cap.
+
+Simple bash loop
+
+Without auth: 
 
 
