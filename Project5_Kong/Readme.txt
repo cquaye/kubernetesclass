@@ -58,3 +58,47 @@ Expected result:
 
 KIC documentation explains that it processes Kubernetes resources marked for its ingress class and translates them into Kong configuration.
 
+Question Time:
+
+        Where is the application actually running?
+        What object exposes the Pods internally?
+        What object tells Kong how to route traffic?
+        What happens if I request /hello?
+        What happens if I request /wrongpath?
+
+Useful Commands:
+
+        kubectl get pods
+        kubectl get svc
+        kubectl get ingress
+        kubectl describe ingress hello-ingress
+        kubectl logs -n kong <kong-controller-pod>
+
+Learning Points to Remember:
+
+        the Deployment manages Pods
+        the Service abstracts Pod access
+        the Ingress defines external routing intent
+        Kong is the gateway enforcing that routing
+        clients do not talk directly to Pods
+
+Let's make some Errors and see what happens.
+
+
+Failure A — Wrong service name
+Change: name: hello-service
+To: name: hello-servicex
+
+What happens?
+
+Failure B — Wrong target port
+Change: targetPort: 5678
+To: targetPort: 9999
+
+What happens?
+
+Failure C — Wrong path expectation
+Remove strip-path annotation or change path behavior.
+
+What Happens?
+
