@@ -67,8 +67,8 @@ Stage 2 Kong Routing Requirement
 
 Routes must exist:
 
-/falcon
-/lindworm
+        /falcon
+        /lindworm
 
 Make Kong USERS!!!
 
@@ -113,8 +113,8 @@ Now the real enforcement layer.
 
 We enforce:
 
-falcon namespace → only port 12000 allowed
-lindworm namespace → only port 3653 allowed
+        falcon namespace → only port 12000 allowed
+        lindworm namespace → only port 3653 allowed
 
 
 OPA Constraint Template: https://github.com/BalericaAI/kubernetesclass/blob/main/Project8_OPA_Kong/OPA/opa_constraint_ports.yaml
